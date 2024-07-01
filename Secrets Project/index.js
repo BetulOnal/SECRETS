@@ -42,7 +42,6 @@ app.post("/get-secret", async (req, res) => {
 });
 
 //POST REQUEST
-//URL+data+config(bearer token)
 app.post("/post-secret", async (req, res) => {
   try {
     const result = await axios.post(API_URL + "/secrets/" , req.body, config);
@@ -54,12 +53,7 @@ app.post("/post-secret", async (req, res) => {
 });
 
 
-
-//<form id="myForm" method="post"> thats why we use all of them app.post
-//axios.get/put/delete vs is like postman request we sent a request from this url with axios
 //PUT REQUEST
-//with PUT request, we have to provide all of the data because we can change all info from server
-//URL+data+config(bearer token)
 app.post("/put-secret", async (req, res) => {
   const searchId = req.body.id;
   try {
@@ -73,8 +67,6 @@ app.post("/put-secret", async (req, res) => {
 
 
 //PATCH REQUEST
-//a PATCH request which remember, you can simply just change one thing. You don't have to provide all of the data.
-//URL+data+config(bearer token)
 app.post("/patch-secret", async (req, res) => {
   const searchId = req.body.id;
   try {
@@ -88,7 +80,6 @@ app.post("/patch-secret", async (req, res) => {
 
 
 //DELETE REQUEST
-//URL+config(bearer token)
 app.post("/delete-secret", async (req, res) => {
   //id came from name  <input type="text" name="id">
   const searchId = req.body.id;
