@@ -20,5 +20,4 @@ npm install
 
 To start the project, you can run:
 
-```bash
 npm start
